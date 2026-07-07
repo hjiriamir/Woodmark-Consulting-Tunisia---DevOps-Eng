@@ -1,0 +1,26 @@
+grafana:
+  service:
+    type: NodePort
+    nodePort: 30094
+  adminUser: admin
+  adminPassword: admin
+
+prometheus:
+  service:
+    type: NodePort
+    nodePort: 30095
+
+prometheus-node-exporter:
+  service:
+    type: NodePort
+    nodePort: 30096
+
+kube-state-metrics:
+  service:
+    type: NodePort
+    nodePort: 31097
+
+persistence:
+  enabled: true
+  storageClass: "standard"
+  size: 10Gi
